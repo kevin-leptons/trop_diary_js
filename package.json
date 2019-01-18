@@ -1,0 +1,30 @@
+{
+  "name": "@trop/diary_nodejs",
+  "version": "0.1.0",
+  "description": "Logging client API for Javascript",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --recursive test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-leptons/trop_diary_nodejs.git"
+  },
+  "keywords": [
+    "logging",
+    "client",
+    "api"
+  ],
+  "author": "Kevin Leptons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevin-leptons/trop_diary_nodejs/issues"
+  },
+  "homepage": "https://github.com/kevin-leptons/trop_diary_nodejs#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
