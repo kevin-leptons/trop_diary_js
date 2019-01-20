@@ -3,10 +3,14 @@
 ```js
 const diary = require('@trop/diary_nodejs')
 
-let service = diary('http://api-endpoint-somewhere.com')
+let logd = diary('http://api-endpoint-somewhere.com')
 ```
 
-This class is not exported, call `diary()` returns an instance. Theare are attributes.
+This class is not exported, call `diary()` returns an instance, there are
+attributes.
 
-* `service.root` / [RootService](api_root_service.md). Retrieve log system information.
-* `service.message` / [MessageService](api_message_service.md). Work with log messages.
+* `logd.root` / [RootService](api_root_service.md), essential system
+  information
+* `logd.auth` / [AuthService](api_auth_service.md), authentication
+* `logd.message` / [MessageService](api_message_service.md).
+  Work with log messages.
