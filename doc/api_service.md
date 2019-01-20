@@ -12,5 +12,6 @@ attributes.
 * `logd.root` / [RootService](api_root_service.md), essential system
   information
 * `logd.auth` / [AuthService](api_auth_service.md), authentication
+* `logd.account` / [AccountService](api_account_service.md), control accounts
 * `logd.message` / [MessageService](api_message_service.md).
   Work with log messages.
