@@ -1,13 +1,5 @@
 # class MessageService
 
-```js
-const diary = require('@trop/diary_nodejs')
-
-let service = diary('http://api-endpoint-somewhere.com')
-
-service.message
-```
-
 ## list(filter)
 
 **input**
