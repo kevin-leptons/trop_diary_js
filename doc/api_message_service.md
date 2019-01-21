@@ -4,7 +4,7 @@
 
 **input**
 
-* `filter` / object / {}
+* `filter` / object / {}M
 * `filter.p` / integer / 1 - page index
 * `filter.ll` / integer - lower bound level
 * `filter.ul` / integer - upper bound level
@@ -15,6 +15,14 @@
 **ouput** - `Array<Object>`
 
 **synopsis** - retrieve log messages
+
+## find(id)
+
+**input**
+
+* id / string - identity of message
+
+**output** - `Object`
 
 ## LOG_LEVEL(message, label=null)
 

@@ -1,9 +1,12 @@
 const assert = require('assert')
 
+const objectid = require('objectid')
+
 const box = require('./box')
 
 describe('resource service', () => {
     let message
+    let existed_message
 
     before(async () => {
         let diary = await box.diary()
@@ -13,6 +16,7 @@ describe('resource service', () => {
     it('list()', async () => {
         let messages = await message.list()
         assert(messages.length > 0)
+        existed_message = messages[0]
     })
 
     it('list(p=1000)', async () => {
@@ -45,7 +49,7 @@ describe('resource service', () => {
         assert(messages.length > 0)
     })
 
-    it('list(uc=yesterday)', async () => {
+    it('list(uc=yesterday) => empty', async () => {
         let d = new Date()
         d.setHours(0)
         d.setMinutes(0)
@@ -56,6 +60,21 @@ describe('resource service', () => {
             uc: yesterday
         })
         assert.equal(messages.length, 0)
+    })
+
+    it('find(existed message)', async () => {
+        let item = await message.find(existed_message._id)
+        assert(item)
+    })
+
+    it('find(non existed message) => 404', async () => {
+        let id = objectid()
+
+        try {
+            let item = await message.find(id.toString())
+        } catch (e) {
+            assert.equal(e.response.status, 404)
+        }
     })
 
     it('info', async() => {
