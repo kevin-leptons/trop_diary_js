@@ -16,7 +16,7 @@ describe('resource auth', () => {
         let token = await auth.create_token({
             grant_type: 'password',
             username: 'root@mail.com',
-            password: 'goddamnit'
+            password: 'motherfucker'
         })
 
         assert(token)

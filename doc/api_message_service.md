@@ -5,13 +5,16 @@
 **input**
 
 * `filter` / object / {}
-* `filter.q` / string / null
 * `filter.p` / integer / 1 - page index
-* `filter.s` / integer / 8 - page size
+* `filter.ll` / integer - lower bound level
+* `filter.ul` / integer - upper bound level
+* `filter.lc` / integer - lower bound created date
+* `filter.uc` / integer - upper bound created date
+* `filter.l` / string - label
 
 **ouput** - `Array<Object>`
 
-**synopsis** - retrive log messages
+**synopsis** - retrieve log messages
 
 ## LOG_LEVEL(message, label=null)
 
