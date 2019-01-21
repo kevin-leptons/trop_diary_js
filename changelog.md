@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.1
+
+* None API change: Add few reference links to API Endpoint and
+  Client command line
+
 ## v0.4.0
 
 * Compative with @trop/diary_api v0.5.0
