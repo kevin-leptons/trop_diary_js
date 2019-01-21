@@ -1,7 +1,7 @@
 {
   "name": "@trop/diary_nodejs",
-  "version": "0.3.0",
-  "description": "Logging client API for Javascript",
+  "version": "0.4.0",
+  "description": "Client APIs for @trop/diary_api",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --recursive test/"
