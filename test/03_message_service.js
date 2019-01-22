@@ -3,8 +3,9 @@ const assert = require('assert')
 const objectid = require('objectid')
 
 const box = require('./box')
+const {ApiError} = require('../lib')
 
-describe('resource service', () => {
+describe('resource mesage', () => {
     let message
     let existed_message
 
@@ -14,24 +15,30 @@ describe('resource service', () => {
     })
 
     it('list()', async () => {
-        let messages = await message.list()
-        assert(messages.length > 0)
-        existed_message = messages[0]
+        let items = await message.list()
+
+        assert(items instanceof Array)
+        assert(items.length > 0)
+        existed_message = items[0]
     })
 
     it('list(p=1000)', async () => {
-        let messages = await message.list({
+        let items = await message.list({
             p: 1000
         })
-        assert.equal(messages.length, 0)
+
+        assert(items instanceof Array)
+        assert.equal(items.length, 0)
     })
 
     it('list(ll=0, ul=4)', async () => {
-        let messages = await message.list({
+        let items = await message.list({
             ll: 0,
             ul: 4
         })
-        assert(messages.length > 0)
+
+        assert(items instanceof Array)
+        assert(items.length > 0)
     })
 
     it('list(lc=today_start, uc=today_end)', async () => {
@@ -42,11 +49,13 @@ describe('resource service', () => {
         let today_start = Math.floor(d.getTime() / 1000)
         d.setDate(d.getDate() + 1)
         let today_end = Math.floor(d.getTime() / 1000)
-        let messages = await message.list({
+        let items = await message.list({
             lc: today_start,
             uc: today_end
         })
-        assert(messages.length > 0)
+
+        assert(items instanceof Array)
+        assert(items.length > 0)
     })
 
     it('list(uc=yesterday) => empty', async () => {
@@ -56,15 +65,18 @@ describe('resource service', () => {
         d.setSeconds(0)
         d.setDate(d.getDate() - 1)
         let yesterday = Math.floor(d.getTime() / 1000)
-        let messages = await message.list({
+        let items = await message.list({
             uc: yesterday
         })
-        assert.equal(messages.length, 0)
+
+        assert(items instanceof Array)
+        assert.equal(items.length, 0)
     })
 
     it('find(existed message)', async () => {
         let item = await message.find(existed_message._id)
-        assert(item)
+
+        assert(item instanceof Object)
     })
 
     it('find(non existed message) => 404', async () => {
@@ -73,32 +85,33 @@ describe('resource service', () => {
         try {
             let item = await message.find(id.toString())
         } catch (e) {
-            assert.equal(e.response.status, 404)
+            assert(e instanceof ApiError)
+            assert.equal(e.status, 404)
         }
     })
 
     it('info', async() => {
         let id = await message.info('something happens')
-        assert(id)
+        assert.equal(id.length, 24)
     })
 
     it('debug', async () => {
         let id = await message.debug('debuging')
-        assert(id)
+        assert.equal(id.length, 24)
     })
 
     it('warn', async () => {
         let id = await message.warn('warning')
-        assert(id)
+        assert.equal(id.length, 24)
     })
 
     it('error', async () => {
         let id = await message.error('error happens')
-        assert(id)
+        assert.equal(id.length, 24)
     })
 
     it('fatal', async () => {
         let id = await message.fatal('oops')
-        assert(id)
+        assert.equal(id.length, 24)
     })
 })

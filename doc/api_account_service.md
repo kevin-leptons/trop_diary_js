@@ -5,10 +5,9 @@
 **input**
 
 * `conf` / Object / {}
-* `conf.q` / string
 * `conf.p` / integer
 
-**ouput** - Array<Object>
+**ouput** - `Array<Object>`
 
 ## create(item)
 
@@ -18,7 +17,7 @@
 * `item.email` / sting
 * `item.password` / string
 
-**output** - string, identity
+**output** - `string`, identity of account
 
 ## change_password(conf)
 

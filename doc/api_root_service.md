@@ -4,6 +4,6 @@
 
 **input** - none
 
-**output** - Object
+**output** - `Object`
 
 **synopsis** - retrieve system information

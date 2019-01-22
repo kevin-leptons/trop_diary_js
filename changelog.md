@@ -3,6 +3,7 @@
 ## v0.5.0
 
 * Compative with @trop/diary_api v0.7.0
+* Throw `ApiError` instead of `axios` error
 
 ## v0.4.1
 

@@ -1,10 +1,10 @@
-const diary = require('../lib')
+const {Service} = require('../lib')
 
 let _diary
 
 async function get_diary() {
     if (!_diary) {
-        _diary = diary()
+        _diary = new Service()
     }
     return _diary
 }

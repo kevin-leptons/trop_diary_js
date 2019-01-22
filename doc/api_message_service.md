@@ -4,7 +4,7 @@
 
 **input**
 
-* `filter` / object / {}M
+* `filter` / object / {}
 * `filter.p` / integer / 1 - page index
 * `filter.ll` / integer - lower bound level
 * `filter.ul` / integer - upper bound level
@@ -20,7 +20,7 @@
 
 **input**
 
-* id / string - identity of message
+* `id` / string - identity of message
 
 **output** - `Object`
 

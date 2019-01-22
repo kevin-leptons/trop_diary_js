@@ -19,7 +19,7 @@ describe('resource auth', () => {
             password: 'motherfucker'
         })
 
-        assert(token)
+        assert(token instanceof Object)
         auth.set_token(token)
         old_token = token
     })
@@ -30,7 +30,7 @@ describe('resource auth', () => {
             refresh_token: old_token.refresh_token
         })
 
-        assert(token)
+        assert(token instanceof Object)
         auth.set_token(token)
     })
 })

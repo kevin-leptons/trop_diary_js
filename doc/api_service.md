@@ -1,17 +1,28 @@
 # class Service
 
 ```js
-const diary = require('@trop/diary_nodejs')
-
-let logd = diary('http://api-endpoint-somewhere.com')
+const {Service} = require('@trop/diary_nodejs')
 ```
 
-This class is not exported, call `diary()` returns an instance, there are
-attributes.
+## constructor()
 
-* `logd.root` / [RootService](api_root_service.md), essential system
-  information
-* `logd.auth` / [AuthService](api_auth_service.md), authentication
-* `logd.account` / [AccountService](api_account_service.md), control accounts
-* `logd.message` / [MessageService](api_message_service.md).
-  Work with log messages.
+* `conf` / Object / {}.
+* `conf.endpoint` / String / 'http://localhost:8080'. URL refers to API
+  endpoint.
+
+## get root
+
+* [RootService](api_root_service.md), essential system information
+
+## get auth
+
+* [AuthService](api_auth_service.md), for authentication
+
+## account
+
+* [AccountService](api_account_service.md), accounts resource
+
+
+## messag
+
+* [MessageService](api_message_service.md), log message resource
