@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.1
+
+* Fix wrong instructions in reamde file
+
 ## v0.5.0
 
 * Compative with @trop/diary_api v0.7.0

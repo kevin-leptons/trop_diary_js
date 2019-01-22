@@ -6,13 +6,18 @@ A Logging Service
 ## Usage
 
 ```js
-const diary = require('@trop/diary_nodejs')
+const {Service} = require('@trop/diary_nodejs')
 
 async run() {
-    let logd = diary('http://api-endpoint-somewhere.com')
-    let log_id = await logd.message.info('something happens')
+    let service = new Service({
+        endpoint: 'http://api-endpoint-somewhere.com'
+    })
+    let id = await logd.message.info('something happens')
 }
 ```
+
+* `service`, client endpoint
+* `id`, identity of log message
 
 ## References
 
