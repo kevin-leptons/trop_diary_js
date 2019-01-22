@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.6.0
+
+* Fix error handle in `HttpService`
+
 ## v0.5.1
 
 * Fix wrong instructions in reamde file
