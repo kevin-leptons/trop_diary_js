@@ -27,6 +27,7 @@
   "devDependencies": {
     "faker": "^4.1.0",
     "mocha": "^5.2.0",
-    "objectid": "^3.2.1"
+    "objectid": "^3.2.1",
+    "uuid": "^3.3.2"
   }
 }

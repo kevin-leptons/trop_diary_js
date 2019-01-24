@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const objectid = require('objectid')
+const uuidv4 = require('uuid/v4')
 
 const box = require('./box')
 const {ApiError} = require('../lib')
@@ -80,7 +80,7 @@ describe('resource mesage', () => {
     })
 
     it('find(non existed message) => 404', async () => {
-        let id = objectid()
+        let id = uuidv4()
 
         try {
             let item = await message.find(id.toString())
@@ -92,26 +92,30 @@ describe('resource mesage', () => {
 
     it('info', async() => {
         let id = await message.info('something happens')
-        assert.equal(id.length, 24)
+        _assert_uuid(id)
     })
 
     it('debug', async () => {
         let id = await message.debug('debuging')
-        assert.equal(id.length, 24)
+        _assert_uuid(id)
     })
 
     it('warn', async () => {
         let id = await message.warn('warning')
-        assert.equal(id.length, 24)
+        _assert_uuid(id)
     })
 
     it('error', async () => {
         let id = await message.error('error happens')
-        assert.equal(id.length, 24)
+        _assert_uuid(id)
     })
 
     it('fatal', async () => {
         let id = await message.fatal('oops')
-        assert.equal(id.length, 24)
+        _assert_uuid(id)
     })
 })
+
+function _assert_uuid(input) {
+    assert.equal(input.length, 36)
+}

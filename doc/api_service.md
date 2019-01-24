@@ -18,6 +18,10 @@ const {Service} = require('@trop/diary_nodejs')
 
 * [AuthService](api_auth_service.md), for authentication
 
+## get key
+
+* [KeyService](api_key_service.md), for `server-server` authentication
+
 ## account
 
 * [AccountService](api_account_service.md), accounts resource

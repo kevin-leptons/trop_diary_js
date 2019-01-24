@@ -12,7 +12,7 @@
 
 **ouput** - Object
 
-* `type` / string, always is `bearer`
+* `type` / string / 'bearer'
 * `expires_at` / integer
 * `access_token` / string
 * `refresh_token` / string
