@@ -1,6 +1,7 @@
 const assert = require('assert')
 
 const box = require('./box')
+const {ApiError} = require('../lib')
 
 describe('resource auth', () => {
     let diary
@@ -20,7 +21,7 @@ describe('resource auth', () => {
         })
 
         assert(token instanceof Object)
-        auth.set_token(token)
+        auth.set_token(token.access_token)
         old_token = token
     })
 
@@ -31,6 +32,26 @@ describe('resource auth', () => {
         })
 
         assert(token instanceof Object)
-        auth.set_token(token)
+        auth.set_token(token.access_token)
+    })
+
+    it('create_key()', async () => {
+        let key = await auth.create_key({
+            role: 'r'
+        })
+
+        assert(key instanceof Object)
+    })
+
+    it('create_key(invalid role) => error', async () => {
+        try {
+            let key = await auth.create_key({
+                role: 'root'
+            })
+        } catch (e) {
+            assert(e instanceof ApiError)
+            return
+        }
+        assert.fail('Does not throw ApiError')
     })
 })
