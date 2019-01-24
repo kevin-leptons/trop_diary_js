@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.0
+
+* Compative with @trop/diary_api v0.8.0
+
 ## v0.6.0
 
 * Fix error handle in `HttpService`
