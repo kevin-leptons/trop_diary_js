@@ -10,7 +10,7 @@
 * `conf.password` / string, only if `grant_type=password`
 * `conf.refresh_token` /  string, only if `grant_type=refresh_token`
 
-**ouput** - Object
+**ouput** - `Object`
 
 * `type` / string / 'bearer'
 * `expires_at` / integer
@@ -24,7 +24,7 @@
 * `conf` / Object / {}
 * `conf.role` / string, one of `r`, `w`, `rw`
 
-**ouput** - Object
+**ouput** - `Object`
 
 * `type` / string / 'key'
 * `expires_at` / integer / 0
@@ -35,12 +35,14 @@
 
 **input**
 
-* `access_token` / string, from `AuthService.create_token()`
+* `access_token` / string, from `create_token().access_token`
 
 **ouput** - `none`
 
-## set_key(key)
+## set_key(access_token)
 
 **input**
 
-* `key` / string, from `AuthService.`
+* `access_token` / string, from `create_key().access_token`
+
+**ouput** - `none`

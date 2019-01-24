@@ -12,7 +12,7 @@ describe('push mesages', () => {
         let token_key = box.get_key('token_key')
         let diary = await box.diary()
 
-        diary.auth.set_key(token_key)
+        diary.auth.set_key(token_key.access_token)
         message = diary.message
     })
 
