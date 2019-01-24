@@ -37,10 +37,11 @@ describe('resource auth', () => {
 
     it('create_key()', async () => {
         let key = await auth.create_key({
-            role: 'r'
+            role: 'rw'
         })
 
         assert(key instanceof Object)
+        box.set_key('token_key', key)
     })
 
     it('create_key(invalid role) => error', async () => {
