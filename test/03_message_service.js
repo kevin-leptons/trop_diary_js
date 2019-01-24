@@ -1,6 +1,7 @@
 const assert = require('assert')
 
 const uuidv4 = require('uuid/v4')
+const faker = require('faker')
 
 const box = require('./box')
 const {ApiError} = require('../lib')
@@ -114,8 +115,26 @@ describe('resource mesage', () => {
         let id = await message.fatal('oops')
         _assert_uuid(id)
     })
+
+    it('push a lot of messages', async () => {
+        for (let i = 0; i < 100; ++i) {
+            let level_index = _random_logger(i)
+            let content = _random_message()
+            await message[level_index](content, 'streess')
+        }
+    })
 })
 
 function _assert_uuid(input) {
     assert.equal(input.length, 36)
+}
+
+function _random_logger(i) {
+    let level_map = ['info', 'debug', 'warn', 'error', 'fatal']
+    let level_index = i % 5
+    return level_map[level_index]
+}
+
+function _random_message() {
+    return faker.fake('{{lorem.paragraph}}')
 }
