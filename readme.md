@@ -12,11 +12,14 @@ async run() {
     let service = new Service({
         endpoint: 'http://api-endpoint-somewhere.com'
     })
-    let id = await logd.message.info('something happens')
+
+    service.auth.use_key_file('path/to/key.json')
+    let id = await service.message.info('something happens')
 }
 ```
 
 * `service`, client endpoint
+* `path/to/key.json`, credential file
 * `id`, identity of log message
 
 ## References
