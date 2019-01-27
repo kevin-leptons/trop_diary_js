@@ -4,10 +4,10 @@
 const {ApiError} = require('@trop/diary_nodejs')
 ```
 
-## get status
+## get status()
 
 * Response status code
 
-## get body
+## get body()
 
 * Response body

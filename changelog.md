@@ -2,6 +2,7 @@
 
 ## v0.9.0
 
+* Compative with @trop/diary_api v0.11.0
 * Improve handler for network error
 
 ## v0.8.0
