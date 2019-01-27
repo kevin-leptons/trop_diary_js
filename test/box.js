@@ -5,7 +5,9 @@ let _keys = {}
 
 async function get_diary() {
     if (!_diary) {
-        _diary = new Service()
+        _diary = new Service({
+            endpoint: 'http://localhost:6969'
+        })
     }
     return _diary
 }
