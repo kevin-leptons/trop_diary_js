@@ -31,19 +31,11 @@
 * `access_token` / string
 
 
-## set_token(access_token)
+## set_token(token)
 
 **input**
 
-* `access_token` / string, from `create_token().access_token`
-
-**ouput** - `none`
-
-## set_key(access_token)
-
-**input**
-
-* `access_token` / string, from `create_key().access_token`
+* `token` / object, which is return from `create_token()` or `create_key()`
 
 **ouput** - `none`
 
@@ -51,7 +43,19 @@
 
 **input**
 
-* `file` / string, path to key file which contains return data from
+* `file` / string, path to key file which contains returned data from
   `create_key()`
 
 **ouput** - `none`
+
+## on(evt, callback)
+
+* `evt` / string, event name
+* `callback` / function(err, data)
+    * `err` / any, on error it is specifies
+    * `ata` / any, data from event
+
+There are events
+
+* `refresh_token`, if current access token is expired and this event is
+   specify then library refresh token automaticall, then execute callback

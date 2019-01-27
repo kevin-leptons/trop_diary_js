@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.10.0
+
+* Merge API `Auth.set_token()` and `Auth.set_key()` to `Auth.set_token()`
+* Add event `refresh_token` for `Auth` service
+
 ## v0.9.0
 
 * Compative with @trop/diary_api v0.11.0

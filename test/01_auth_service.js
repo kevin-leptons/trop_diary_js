@@ -25,7 +25,7 @@ describe('resource auth', () => {
         })
 
         assert(token instanceof Object)
-        auth.set_token(token.access_token)
+        auth.set_token(token)
         old_token = token
     })
 
@@ -36,7 +36,7 @@ describe('resource auth', () => {
         })
 
         assert(token instanceof Object)
-        auth.set_token(token.access_token)
+        auth.set_token(token)
     })
 
     it('create_key()', async () => {
