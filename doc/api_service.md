@@ -10,19 +10,19 @@ const {Service} = require('@trop/diary_nodejs')
 * `conf.endpoint` / String / 'http://localhost:8080'. URL refers to API
   endpoint.
 
-## get root
+## get root()
 
 * [RootService](api_root_service.md), essential system information
 
-## get auth
+## get auth()
 
 * [AuthService](api_auth_service.md), for authentication
 
-## account
+## get account()
 
 * [AccountService](api_account_service.md), accounts resource
 
 
-## messag
+## get message()
 
 * [MessageService](api_message_service.md), log message resource

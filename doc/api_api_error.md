@@ -1,4 +1,4 @@
-# ApiError
+# class ApiError
 
 ```js
 const {ApiError} = require('@trop/diary_nodejs')

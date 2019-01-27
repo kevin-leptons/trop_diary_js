@@ -46,3 +46,12 @@
 * `access_token` / string, from `create_key().access_token`
 
 **ouput** - `none`
+
+## use_key_file(path)
+
+**input**
+
+* `path` / string, path to key file which contains return data from
+  `create_key()`
+
+**ouput** - `none`
