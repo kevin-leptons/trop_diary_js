@@ -12,6 +12,9 @@ describe('resource mesage', () => {
     before(async () => {
         let diary = await box.diary()
         message = diary.message
+
+        let key_file = box.get_key('key_file')
+        diary.auth.use_key_file(key_file)
     })
 
     it('list()', async () => {

@@ -47,11 +47,11 @@
 
 **ouput** - `none`
 
-## use_key_file(path)
+## use_key_file(file)
 
 **input**
 
-* `path` / string, path to key file which contains return data from
+* `file` / string, path to key file which contains return data from
   `create_key()`
 
 **ouput** - `none`
