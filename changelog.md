@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.11.0
+
+* Just re-release because v0.10.0 is already existed in NPM registry
+
 ## v0.10.0
 
 * Merge API `Auth.set_token()` and `Auth.set_key()` to `Auth.set_token()`
