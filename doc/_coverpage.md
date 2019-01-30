@@ -9,5 +9,5 @@
 
 [Github](https://github.com/kevin-leptons/trop_diary_nodejs)
 [@trop/diary_api](https://trop-diary-api.netlify.com)
-[@trop/diary_cli](https://github.com/kevin-leptons/trop_diary_cli)
+[@trop/diary_cli](https://trop-diary-cli.netlify.com)
 [Get Started](intro.md)
