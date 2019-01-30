@@ -1,9 +1,11 @@
 # class RootService
 
-## get()
+Checkout [class Service](api_service.md) to get an instance of this service
 
-**input** - none
+## get()
 
 **output** - `Object`
 
-**synopsis** - retrieve system information
+**description**
+
+* retrieve system information

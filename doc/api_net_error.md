@@ -6,4 +6,4 @@ const {NetError} = require('@trop/diary_nodejs')
 
 ## get origin()
 
-Original error which is throws
+**ouput** / `any` - original error which is throws by client

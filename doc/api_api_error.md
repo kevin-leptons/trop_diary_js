@@ -6,8 +6,8 @@ const {ApiError} = require('@trop/diary_nodejs')
 
 ## get status()
 
-* Response status code
+**output** / `integer` - Response status code from API
 
 ## get body()
 
-* Response body
+**ouput** / `any` - Response body from API

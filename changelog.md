@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.12.0
+
+* Use docsify as document tool
+
 ## v0.11.0
 
 * Just re-release because v0.10.0 is already existed in NPM registry
