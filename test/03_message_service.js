@@ -17,6 +17,31 @@ describe('resource mesage', () => {
         diary.auth.use_key_file(key_file)
     })
 
+    it('info', async() => {
+        let id = await message.info('something happens')
+        _assert_uuid(id)
+    })
+
+    it('debug', async () => {
+        let id = await message.debug('debuging')
+        _assert_uuid(id)
+    })
+
+    it('warn', async () => {
+        let id = await message.warn('warning')
+        _assert_uuid(id)
+    })
+
+    it('error', async () => {
+        let id = await message.error('error happens')
+        _assert_uuid(id)
+    })
+
+    it('fatal', async () => {
+        let id = await message.fatal('oops')
+        _assert_uuid(id)
+    })
+
     it('list()', async () => {
         let items = await message.list()
 
@@ -91,31 +116,6 @@ describe('resource mesage', () => {
             assert(e instanceof ApiError)
             assert.equal(e.status, 404)
         }
-    })
-
-    it('info', async() => {
-        let id = await message.info('something happens')
-        _assert_uuid(id)
-    })
-
-    it('debug', async () => {
-        let id = await message.debug('debuging')
-        _assert_uuid(id)
-    })
-
-    it('warn', async () => {
-        let id = await message.warn('warning')
-        _assert_uuid(id)
-    })
-
-    it('error', async () => {
-        let id = await message.error('error happens')
-        _assert_uuid(id)
-    })
-
-    it('fatal', async () => {
-        let id = await message.fatal('oops')
-        _assert_uuid(id)
     })
 })
 
