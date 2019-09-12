@@ -2,6 +2,8 @@
 
 ## v0.13.0
 
+* Change: It's compliant with `@trop/diary_api v0.14.0`.
+
 ## v0.12.0
 
 * Use docsify as document tool
