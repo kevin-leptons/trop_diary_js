@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.14.0
+
+* Fix incorrect data which returned from find message.
+
 ## v0.13.0
 
 * Change: It's compliant with `@trop/diary_api v0.14.0`.
